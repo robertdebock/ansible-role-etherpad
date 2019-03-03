@@ -1,0 +1,34 @@
+---
+# tasks file for etherpad
+- name: create etherpad_installation_destination
+  file:
+    path: "{{ etherpad_installation_destination }}"
+    state: directory
+
+- name: install etherpad
+  unarchive:
+    src: "{{ etherpad_url }}"
+    dest: "{{ etherpad_installation_destination }}"
+    remote_src: yes
+  register: etherpad_install_etherpad
+  until: etherpad_install_etherpad is succeeded
+  retries: 3
+
+# - name: configure etherpad
+#   template:
+#     src: "{{ etherpad_config_file }}.j2"
+#     dest: "{{ etherpad_config_directory }}/{{ etherpad_config_file }}"
+#   notify:
+#     - restart etherpad
+
+- name: create etherpad service
+  import_role:
+    name: robertdebock.service
+
+- name: start and enable etherpad
+  service:
+    name: "{{ etherpad_service }}"
+    state: started
+    enabled: yes
+  when:
+    - ansible_virtualization_type != "docker" or etherpad_ignore_docker

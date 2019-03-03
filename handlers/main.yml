@@ -1,0 +1,8 @@
+---
+# handlers file for etherpad
+- name: restart etherpad
+  service:
+    name: "{{ etherpad_service }}"
+    state: restarted
+  when:
+    - ansible_virtualization_type != "docker" or etherpad_ignore_docker
