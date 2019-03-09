@@ -17,6 +17,9 @@ This example is taken from `molecule/default/playbook.yml`:
   become: yes
   serial: 30%
 
+  vars:
+    etherpad_port: 9002
+
   roles:
     - role: robertdebock.bootstrap
     - role: robertdebock.epel
@@ -38,6 +41,8 @@ These variables are set in `defaults/main.yml`:
 etherpad_version: 1.7.5
 
 etherpad_installation_destination: /opt
+
+etherpad_port: 9001
 
 # Some Docker containers do not allow managing services, rebooting and writing
 # to some locations in /etc. The role skips tasks that will typically fail in
