@@ -6,8 +6,3 @@ etherpad_version: 1.7.5
 etherpad_installation_destination: /opt
 
 etherpad_port: 9001
-
-# Some Docker containers do not allow managing services, rebooting and writing
-# to some locations in /etc. The role skips tasks that will typically fail in
-# Docker. With this parameter you can tell the role to -not- skip these tasks.
-etherpad_ignore_docker: yes
