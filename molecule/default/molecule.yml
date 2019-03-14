@@ -3,10 +3,10 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
   - name: etherpad-alpine-edge
     image: alpine:edge
@@ -35,19 +35,13 @@ platforms:
   - name: etherpad-ubuntu-latest
     image: ubuntu:latest
   - name: etherpad-ubuntu-rolling
-    image: ubuntu:artful
+    image: ubuntu:rolling
   - name: etherpad-ubuntu-devel
     image: ubuntu:devel
+  - name: etherpad-ubuntu-latest
+    image: ubuntu:latest
 provisioner:
   name: ansible
-  inventory:
-    group_vars:
-      all:
-        etherpad_ignore_docker: no
-        service_ignore_docker: no
-    host_vars:
-      etherpad-fedora-rawhide:
-        ansible_python_interpreter: /usr/bin/python3
   lint:
     name: ansible-lint
 scenario:
