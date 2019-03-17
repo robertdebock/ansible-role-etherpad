@@ -5,9 +5,6 @@
   become: yes
   serial: 30%
 
-  vars:
-    etherpad_port: 9002
-
   roles:
     - role: robertdebock.bootstrap
     - role: robertdebock.epel
