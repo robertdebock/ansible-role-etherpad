@@ -4,7 +4,7 @@ _etherpad_requirements:
   default: []
   Debian: gnupg
 
-etherpad_requirements: "{{ _etherpad_requirements[ansible_os_family] | default['default'] }}"
+etherpad_requirements: "{{ _etherpad_requirements[ansible_os_family] | default(_etherpad_requirements['default']) }}"
 
 etherpad_url: https://github.com/ether/etherpad-lite/archive/{{ etherpad_version }}.zip
 
