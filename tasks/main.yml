@@ -1,5 +1,13 @@
 ---
 # tasks file for etherpad
+- name: install requirements
+  package:
+    name: "{{ etherpad_requirements }}"
+    state: present
+  register: etherpad_install_requirements
+  until: etherpad_install_requirements is succeeded
+  retries: 3
+
 - name: create etherpad_installation_destination
   file:
     path: "{{ etherpad_installation_destination }}"
