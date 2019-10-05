@@ -34,10 +34,10 @@ The machine you are running this on, may need to be prepared.
   hosts: all
   gather_facts: no
   become: yes
-  serial: 30%
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.core_dependencies
     - role: robertdebock.epel
     - role: robertdebock.npm
 ```
@@ -70,6 +70,7 @@ The following roles can be installed to ensure all requirements are met, using `
 ```yaml
 ---
 - robertdebock.bootstrap
+- robertdebock.core_dependencies
 - robertdebock.epel
 - robertdebock.npm
 - robertdebock.service
