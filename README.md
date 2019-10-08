@@ -6,8 +6,8 @@ etherpad
 
 Install and configure Etherpad on your system.
 
-<img src="https://img.shields.io/ansible/role/d/38333"/>
-<img src="https://img.shields.io/ansible/quality/38333"/>
+<img src="https://img.shields.io/ansible/role/d/"/>
+<img src="https://img.shields.io/ansible/quality/"/>
 
 Example Playbook
 ----------------
