@@ -31,5 +31,3 @@
     name: "{{ etherpad_service }}"
     state: started
     enabled: yes
-  when:
-    - ansible_virtualization_type != "docker"
