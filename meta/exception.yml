@@ -2,5 +2,5 @@
 exceptions:
   - variation: Alpine
     reason: Not idempotent on starting the service.
-  - variation: Ubuntu:
+  - variation: Ubuntu
     reason: Your npm version "3.5.2" is too old. npm 3.10.x or higher is required.
