@@ -2,12 +2,9 @@ etherpad
 =========
 
 <img src="https://docs.ansible.com/ansible-tower/3.2.4/html_ja/installandreference/_static/images/logo_invert.png" width="10%" height="10%" alt="Ansible logo" align="right"/>
-<a href="https://travis-ci.org/robertdebock/ansible-role-etherpad"><img src="https://travis-ci.org/robertdebock/ansible-role-etherpad.svg?branch=master" alt="Build status" align="left"/></a>
+<a href="https://travis-ci.org/robertdebock/ansible-role-etherpad"> <img src="https://travis-ci.org/robertdebock/ansible-role-etherpad.svg?branch=master" alt="Build status"/></a> <img src="https://img.shields.io/ansible/role/d/38333"/> <img src="https://img.shields.io/ansible/quality/38333"/>
 
 Install and configure Etherpad on your system.
-
-<img src="https://img.shields.io/ansible/role/d/38333"/>
-<img src="https://img.shields.io/ansible/quality/38333"/>
 
 Example Playbook
 ----------------
@@ -93,8 +90,6 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tag|allow_failures|
 |---------|---|--------------|
-|alpine|latest|no|
-|alpine|edge|yes|
 |debian|stable|yes|
 |debian|unstable|yes|
 |debian|latest|no|
@@ -103,9 +98,6 @@ This role has been tested on these [container images](https://hub.docker.com/):
 |fedora|latest|no|
 |fedora|rawhide|yes|
 |opensuse|latest|no|
-|ubuntu|rolling|yes|
-|ubuntu|devel|yes|
-|ubuntu|latest|no|
 
 This role has been tested on these Ansible versions:
 
@@ -122,7 +114,8 @@ Some variarations of the build matrix do not work. These are the variations and 
 
 | variation                 | reason                 |
 |---------------------------|------------------------|
-| Archlinux & Ansible 2.7 | New-style module did not handle its own exit |
+| Alpine | Not idempotent on starting the service. |
+| Ubuntu | Your npm version "3.5.2" is too old. npm 3.10.x or higher is required. |
 
 
 
