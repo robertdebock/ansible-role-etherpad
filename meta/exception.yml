@@ -4,3 +4,5 @@ exceptions:
     reason: Not idempotent on starting the service.
   - variation: Ubuntu
     reason: Your npm version "3.5.2" is too old. npm 3.10.x or higher is required.
+  - variation: amazonlinux
+    reason: "Failed to set execute bit on remote files"

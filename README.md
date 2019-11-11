@@ -90,8 +90,6 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tag|allow_failures|
 |---------|---|--------------|
-|amazonlinux|1|no|
-|amazonlinux|latest|no|
 |debian|unstable|yes|
 |debian|latest|no|
 |centos|7|no|
@@ -115,6 +113,7 @@ Some variarations of the build matrix do not work. These are the variations and 
 |---------------------------|------------------------|
 | Alpine | Not idempotent on starting the service. |
 | Ubuntu | Your npm version "3.5.2" is too old. npm 3.10.x or higher is required. |
+| amazonlinux | Failed to set execute bit on remote files |
 
 
 
