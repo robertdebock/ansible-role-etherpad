@@ -9,7 +9,7 @@ etherpad_service: etherpad
 etherpad_working_directory: "{{ etherpad_installation_destination }}/etherpad-lite-{{ etherpad_version }}"
 
 service_list:
-  name: etherpad
-  description: Etherpad
-  start_command: "{{ etherpad_working_directory }}/bin/run.sh --root"
-  working_directory: "{{ etherpad_working_directory }}"
+  - name: etherpad
+    description: Etherpad
+    start_command: "{{ etherpad_working_directory }}/bin/run.sh --root"
+    working_directory: "{{ etherpad_working_directory }}"
