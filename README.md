@@ -104,7 +104,7 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tags|
 |---------|----|
-|debian|all|
+|debian|buster|
 |el|7, 8|
 |fedora|all|
 |opensuse|all|
@@ -122,9 +122,10 @@ Some variarations of the build matrix do not work. These are the variations and 
 
 | variation                 | reason                 |
 |---------------------------|------------------------|
-| Alpine | Not idempotent on starting the service. |
-| Ubuntu | Your npm version "3.5.2" is too old. npm 3.10.x or higher is required. |
+| alpine | Not idempotent on starting the service. |
+| ubuntu | Your npm version "3.5.2" is too old. npm 3.10.x or higher is required. |
 | amazonlinux | Failed to set execute bit on remote files |
+| debian:testing | The repository 'https://deb.nodesource.com/node_10.x bullseye Release' does not have a Release file. |
 
 
 Testing
