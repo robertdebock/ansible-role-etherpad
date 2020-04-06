@@ -20,7 +20,7 @@ This example is taken from `molecule/resources/converge.yml` and is tested on ea
     etherpad_port: 9002
 
   roles:
-    - robertdebock.etherpad
+    - role: robertdebock.etherpad
 ```
 
 The machine may need to be prepared using `molecule/resources/prepare.yml`:
