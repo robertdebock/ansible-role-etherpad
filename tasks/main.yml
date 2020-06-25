@@ -1,5 +1,8 @@
 ---
 # tasks file for etherpad
+- name: include assert.yml
+  include_tasks: assert.yml
+
 - name: create etherpad_installation_destination
   file:
     path: "{{ etherpad_installation_destination }}"
