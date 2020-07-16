@@ -14,9 +14,6 @@
     dest: "{{ etherpad_installation_destination }}"
     remote_src: yes
     creates: "{{ etherpad_working_directory }}"
-  register: etherpad_install_etherpad
-  until: etherpad_install_etherpad is succeeded
-  retries: 3
 
 - name: configure etherpad
   template:
