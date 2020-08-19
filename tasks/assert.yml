@@ -4,12 +4,14 @@
     that:
       - etherpad_version is defined
       - etherpad_version | length > 0
+    quiet: yes
 
 - name: test if etherpad_installation_destination is set correctly
   assert:
     that:
       - etherpad_installation_destination is defined
       - etherpad_installation_destination | length > 0
+    quiet: yes
 
 - name: test if etherpad_port is set correctly
   assert:
@@ -18,3 +20,4 @@
       - etherpad_port | int
       - etherpad_port | int > 0
       - etherpad_port | int <= 65536
+    quiet: yes
