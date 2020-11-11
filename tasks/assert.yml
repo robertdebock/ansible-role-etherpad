@@ -17,7 +17,7 @@
   assert:
     that:
       - etherpad_port is defined
-      - etherpad_port | int
+      - etherpad_port is number
       - etherpad_port | int > 0
       - etherpad_port | int <= 65536
     quiet: yes
