@@ -16,6 +16,6 @@
     that:
       - etherpad_port is defined
       - etherpad_port is number
-      - etherpad_port | int > 0
-      - etherpad_port | int <= 65536
+      - etherpad_port > 0
+      - etherpad_port <= 65536
     quiet: yes
