@@ -1,4 +1,5 @@
 ---
+
 - name: test if etherpad_version is set correctly
   assert:
     that:
