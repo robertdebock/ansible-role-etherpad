@@ -4,12 +4,14 @@
   assert:
     that:
       - etherpad_version is defined
+      - etherpad_version is string
     quiet: yes
 
 - name: test if etherpad_installation_destination is set correctly
   assert:
     that:
       - etherpad_installation_destination is defined
+      - etherpad_installation_destination is string
     quiet: yes
 
 - name: test if etherpad_port is set correctly
