@@ -2,9 +2,9 @@
 
 Install and configure Etherpad on your system.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-etherpad.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-etherpad)|[![github](https://github.com/robertdebock/ansible-role-etherpad/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-etherpad/actions)|[![quality](https://img.shields.io/ansible/quality/38333)](https://galaxy.ansible.com/robertdebock/etherpad)|[![downloads](https://img.shields.io/ansible/role/d/38333)](https://galaxy.ansible.com/robertdebock/etherpad)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-etherpad.svg)](https://github.com/robertdebock/ansible-role-etherpad/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-etherpad.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-etherpad)|[![github](https://github.com/robertdebock/ansible-role-etherpad/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-etherpad/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-etherpad/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-etherpad)|[![quality](https://img.shields.io/ansible/quality/38333)](https://galaxy.ansible.com/robertdebock/etherpad)|[![downloads](https://img.shields.io/ansible/role/d/38333)](https://galaxy.ansible.com/robertdebock/etherpad)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-etherpad.svg)](https://github.com/robertdebock/ansible-role-etherpad/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -142,10 +142,6 @@ image="debian" tag="stable" tox
 ## [License](#license)
 
 Apache-2.0
-
-## [Contributors](#contributors)
-
-I'd like to thank everybody that made contributions to this repository. It motivates me, improves the code and is just fun to collaborate.
 
 
 ## [Author Information](#author-information)
