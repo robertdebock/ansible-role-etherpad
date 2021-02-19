@@ -7,13 +7,13 @@
   delegate_to: localhost
 
 - name: create etherpad_installation_destination
-  file:
+  ansible.builtin.file:
     path: "{{ etherpad_installation_destination }}"
     state: directory
     mode: "0750"
 
 - name: install etherpad
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ etherpad_url }}"
     dest: "{{ etherpad_installation_destination }}"
     remote_src: yes
@@ -21,7 +21,7 @@
     mode: "0750"
 
 - name: configure etherpad
-  template:
+  ansible.builtin.template:
     src: "{{ etherpad_configuration_file }}.j2"
     dest: "{{ etherpad_working_directory }}/{{ etherpad_configuration_file }}"
     mode: "0640"
@@ -29,7 +29,7 @@
     - restart etherpad
 
 - name: create etherpad service
-  import_role:
+  ansible.builtin.import_role:
     name: robertdebock.service
   vars:
     service_list:
@@ -40,7 +40,7 @@
 
 
 - name: start and enable etherpad
-  service:
+  ansible.builtin.service:
     name: "{{ etherpad_service }}"
     state: started
     enabled: yes

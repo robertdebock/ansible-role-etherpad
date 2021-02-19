@@ -2,7 +2,7 @@
 # handlers file for etherpad
 
 - name: restart etherpad
-  service:
+  ansible.builtin.service:
     name: "{{ etherpad_service }}"
     state: restarted
   when:
