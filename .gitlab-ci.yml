@@ -24,8 +24,6 @@ molecule:
         tag: "latest"
       - image: "fedora"
         tag: "rawhide"
-      - image: "ubuntu"
-        tag: "latest"
 
 galaxy:
   script:
