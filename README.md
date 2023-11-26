@@ -1,4 +1,4 @@
-# Ansible role [etherpad](#etherpad)
+# [Ansible role etherpad](#etherpad)
 
 Install and configure Etherpad on your system.
 
