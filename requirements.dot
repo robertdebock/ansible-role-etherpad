@@ -1,0 +1,17 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    "etherpad" [fillcolor=yellow style=filled penwidth=3]
+    "robertdebock.bootstrap" [fillcolor=green style=filled]
+    "robertdebock.core_dependencies" [fillcolor=green style=filled]
+    "robertdebock.epel" [fillcolor=green style=filled]
+    "robertdebock.npm" [fillcolor=green style=filled]
+    "robertdebock.service" [fillcolor=green style=filled]
+  }
+  "etherpad" -> "robertdebock.bootstrap"
+  "etherpad" -> "robertdebock.core_dependencies"
+  "etherpad" -> "robertdebock.epel"
+  "etherpad" -> "robertdebock.npm"
+  "etherpad" -> "robertdebock.service"
+}
